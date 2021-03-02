@@ -1,0 +1,15 @@
+{
+  "simulatorParams": {
+    "repeatCount": 1,
+    "repeatInterval": 1,
+    "vesServerUrl": "http://ves"
+  },
+  "templateName": "notification.json",
+  "patch": {},
+  "variables": {
+    "dn": "some/dn",
+    "attributesList": {
+      "attribute1": "value1"
+    }
+  }
+}
