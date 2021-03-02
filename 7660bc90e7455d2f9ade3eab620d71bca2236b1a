@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1e92822c_592ffe07",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 5098
+      },
+      "writtenOn": "2021-03-02T14:03:10Z",
+      "side": 1,
+      "message": "VES client\nplease replace all PNF Simulator occurrence with VES client",
+      "range": {
+        "startLine": 2,
+        "startChar": 77,
+        "endLine": 2,
+        "endChar": 91
+      },
+      "revId": "7660bc90e7455d2f9ade3eab620d71bca2236b1a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ab6731db_444795ef",
+        "filename": "pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 5098
+      },
+      "writtenOn": "2021-03-02T14:03:10Z",
+      "side": 1,
+      "message": "please remove",
+      "range": {
+        "startLine": 43,
+        "startChar": 32,
+        "endLine": 43,
+        "endChar": 50
+      },
+      "revId": "7660bc90e7455d2f9ade3eab620d71bca2236b1a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e4cbfd0a_467a2abf",
+        "filename": "pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 5098
+      },
+      "writtenOn": "2021-03-02T14:03:10Z",
+      "side": 1,
+      "message": "please remove, or replace artifactory.dockerregistry.url with onap.nexus.dockerregistry.daily",
+      "range": {
+        "startLine": 125,
+        "startChar": 36,
+        "endLine": 125,
+        "endChar": 103
+      },
+      "revId": "7660bc90e7455d2f9ade3eab620d71bca2236b1a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
