@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f816cc68_43193a96",
+        "filename": "pom.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 3433
+      },
+      "writtenOn": "2021-03-05T11:23:21Z",
+      "side": 1,
+      "message": "where is groupId ?",
+      "revId": "1fd74e53dffeb6fc543f647581e3765dac2cdbdb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7f99ed4b_529bdc81",
+        "filename": "src/main/java/org/onap/avcnmanager/kafka/stream/AVCNKafkaStream.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 3433
+      },
+      "writtenOn": "2021-03-05T11:23:21Z",
+      "side": 1,
+      "message": "strange! Must be checked after code movement to the new repository.",
+      "revId": "1fd74e53dffeb6fc543f647581e3765dac2cdbdb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
