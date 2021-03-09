@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "60f71123_5126a113",
+        "filename": "pom.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 6482
+      },
+      "writtenOn": "2021-03-09T08:47:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f816cc68_43193a96",
+      "revId": "1fd74e53dffeb6fc543f647581e3765dac2cdbdb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f99ed4b_529bdc81",
         "filename": "src/main/java/org/onap/avcnmanager/kafka/stream/AVCNKafkaStream.java",
         "patchSetId": 3
