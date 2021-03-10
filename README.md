@@ -126,3 +126,11 @@ It's possible to override default configuration. Following environment variables
     
     REST_CLIENT_VES_ENDPOINT - VES URL, AVNC events will be send via VES client to this address 
     
+## Start avcn-manager
+To run avcn manager, config ves and pnf-simulator ip in docker-compose.yaml
+REST_CLIENT_VES_ENDPOINT: http://<ves>:8080/eventListener/v7
+REST_CLIENT_VESCLIENT_ENDPOINT: http://<ves-client>:5000/simulator/start
+
+and start docker-compose
+    
+    docker-compose up
