@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fd2965dc_c59d220d",
+        "filename": "README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 3433
+      },
+      "writtenOn": "2021-03-10T12:17:24Z",
+      "side": 1,
+      "message": "PNFSIMULATOR -\u003e VESCLIENT\npnf-simulator -\u003e ves-client",
+      "revId": "5b0eab38d9ce85e55c4e0e5f8172566715cbca50",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1151f717_db128421",
+        "filename": "docker-compose.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 3433
+      },
+      "writtenOn": "2021-03-10T12:17:24Z",
+      "side": 1,
+      "message": "PNFSIMULATOR -\u003e VESCLIENT\n\npnf-simulator -\u003e ves-cilent",
+      "revId": "5b0eab38d9ce85e55c4e0e5f8172566715cbca50",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
