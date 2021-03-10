@@ -27,10 +27,10 @@
     <parent>
         <groupId>org.onap.oparent</groupId>
         <artifactId>oparent</artifactId>
-        <version>3.2.0</version>
+        <version>2.1.0</version>
     </parent>
 
-    <groupId>org.onap.integration.nfsimulator</groupId>
+    <groupId>org.onap.integration.simulators.nf-simulator.avcn-manager</groupId>
     <artifactId>avcn-manager</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <name>avcn-manager</name>

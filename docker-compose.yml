@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+
+  avcn-manager:
+    image: nexus3.onap.org:10003/onap/avcn-manager:latest
+    ports:
+      - "9090:8080"
+    restart: on-failure
+    hostname: avcn-manager
+    networks:
+      - avcn_network
+    environment:
+      REST_CLIENT_VES_ENDPOINT: http://ves:8080/eventListener/v7
+      KAFKA_BOOTSTRAP_SERVERS: avcn-kafka:9092
+      KAFKA_SOURCE_TOPIC: config
+      KAFKA_APPLICATION_ID: avcn-manager
+      REST_CLIENT_VESCLIENT_ENDPOINT: http://ves-cilent:5000/simulator/start
+    depends_on:
+      - avcn-kafka
+
+  avcn-zookeeper:
+    image: wurstmeister/zookeeper
+    ports:
+      - "2181:2181"
+    networks:
+      - avcn_network
+
+  avcn-kafka:
+    image: wurstmeister/kafka:1.1.0
+    ports:
+      - "9092:9092"
+    hostname: avcn-kafka
+    networks:
+      - avcn_network
+    environment:
+      KAFKA_ADVERTISED_PORT: 9092
+      KAFKA_ADVERTISED_HOST_NAME: avcn-kafka
+      KAFKA_ZOOKEEPER_CONNECT: avcn-zookeeper:2181
+      KAFKA_CREATE_TOPICS: "config:1:1"
+      KAFKA_DELETE_RETENTION_MS: 604800000
+      KAFKA_LOG_CLEANER_DELETE_RETENTION_MS: 604800000
+    depends_on:
+      - avcn-zookeeper
+
+networks:
+  avcn_network:
+    driver: bridge
