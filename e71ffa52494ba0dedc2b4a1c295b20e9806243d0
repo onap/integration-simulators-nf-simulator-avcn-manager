@@ -1,0 +1,8 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+1: Bartosz Gardziejewski <bartosz.gardziejewski@nokia.com>
+Code-Review+2: Bogumil Zebek <bogumil.zebek@nokia.com>
+Submitted-by: Bogumil Zebek <bogumil.zebek@nokia.com>
+Submitted-at: Mon, 15 Mar 2021 13:03:16 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/integration/simulators/nf-simulator/avcn-manager/+/119303
+Project: integration/simulators/nf-simulator/avcn-manager
+Branch: refs/heads/master
