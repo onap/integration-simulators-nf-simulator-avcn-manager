@@ -125,7 +125,7 @@
                         <executions>
                             <execution>
                                 <id>docker-build-image</id>
-                                <phase>package</phase>
+                                <phase>install</phase>
                                 <goals>
                                     <goal>build</goal>
                                 </goals>
@@ -151,7 +151,7 @@
                                         <contextDir>${project.basedir}</contextDir>
                                         <dockerFile>${project.basedir}/docker/Dockerfile</dockerFile>
                                         <tags>
-                                            <tag>${project.version}-STAGE-${maven.build.timestamp}Z</tag>
+                                            <tag>${project.version}-${maven.build.timestamp}Z</tag>
                                         </tags>
                                     </build>
                                 </image>
