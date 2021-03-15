@@ -58,6 +58,7 @@
         <junit-jupiter-engine.version>5.3.1</junit-jupiter-engine.version>
         <assertj-core.version>3.13.2</assertj-core.version>
         <docker-maven-plugin.version>0.31.0</docker-maven-plugin.version>
+        <skipDockerPush>true</skipDockerPush>
     </properties>
 
 
@@ -110,6 +111,11 @@
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
+            <properties>
+                <os.detected.name>linux</os.detected.name>
+                <os.detected.arch>x86_64</os.detected.arch>
+                <os.detected.classifier>${os.detected.name}-${os.detected.arch}</os.detected.classifier>
+            </properties>
             <build>
                 <plugins>
                     <plugin>
@@ -118,24 +124,38 @@
                         <version>${docker-maven-plugin.version}</version>
                         <executions>
                             <execution>
-                                <id>build-image</id>
+                                <id>docker-build-image</id>
+                                <phase>package</phase>
                                 <goals>
                                     <goal>build</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>docker-push-image</id>
+                                <phase>deploy</phase>
+                                <goals>
                                     <goal>push</goal>
                                 </goals>
                             </execution>
                         </executions>
                         <configuration>
+                            <skipPush>${skipDockerPush}</skipPush>
+                            <verbose>true</verbose>
+                            <imagePullPolicy>IfNotPresent</imagePullPolicy>
                             <images>
                                 <image>
+                                    <alias>${project.artifactId}</alias>
                                     <name>${onap.nexus.dockerregistry.daily}/${docker.image.name}</name>
+                                    <registry>${onap.nexus.dockerregistry.daily}</registry>
                                     <build>
                                         <contextDir>${project.basedir}</contextDir>
                                         <dockerFile>${project.basedir}/docker/Dockerfile</dockerFile>
+                                        <tags>
+                                            <tag>${project.version}-STAGE-${maven.build.timestamp}Z</tag>
+                                        </tags>
                                     </build>
                                 </image>
                             </images>
-
                         </configuration>
                     </plugin>
                 </plugins>
