@@ -16,6 +16,24 @@
       "revId": "536eeb282b2f180e03fa8350769e7634bfd9f2d5",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3696b371_61eb4ae0",
+        "filename": "pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 5234
+      },
+      "writtenOn": "2021-03-16T08:36:10Z",
+      "side": 1,
+      "message": "Nevermind, it\u0027s fine 😉",
+      "parentUuid": "c64720f3_ce1ff945",
+      "revId": "536eeb282b2f180e03fa8350769e7634bfd9f2d5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
