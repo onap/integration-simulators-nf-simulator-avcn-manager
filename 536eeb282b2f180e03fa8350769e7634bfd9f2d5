@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c64720f3_ce1ff945",
+        "filename": "pom.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 5234
+      },
+      "writtenOn": "2021-03-16T08:27:40Z",
+      "side": 1,
+      "message": "\u0027install\u0027 does \u0027package\u0027 goal AND saves .jar in Maven local repository. But is this local save needed in Jenkins?",
+      "revId": "536eeb282b2f180e03fa8350769e7634bfd9f2d5",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
