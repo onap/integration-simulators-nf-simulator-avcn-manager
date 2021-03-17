@@ -45,6 +45,8 @@
         <maven.compiler.target>11</maven.compiler.target>
 
         <maven.build.timestamp.format>yyyyMMdd'T'HHmmss</maven.build.timestamp.format>
+        <docker-image.namespace>onap</docker-image.namespace>
+        <docker-image.name.prefix>org.onap.integration.nfsimulator</docker-image.name.prefix>
         <docker.image.tag>latest</docker.image.tag>
         <docker.image.name>onap/${project.artifactId}</docker.image.name>
         <dependency.directory.name>libs</dependency.directory.name>
@@ -145,7 +147,7 @@
                             <images>
                                 <image>
                                     <alias>${project.artifactId}</alias>
-                                    <name>${onap.nexus.dockerregistry.daily}/${docker.image.name}</name>
+                                    <name>${docker-image.namespace}/${docker-image.name.prefix}.${artifactId}</name>
                                     <registry>${onap.nexus.dockerregistry.daily}</registry>
                                     <build>
                                         <contextDir>${project.basedir}</contextDir>
