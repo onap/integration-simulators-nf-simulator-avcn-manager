@@ -2,5 +2,5 @@ FROM docker.io/openjdk:11-jre-slim
 
 ARG VERSION=${version}
 
-ADD target/avcn-manager-${VERSION}.jar /app/avcn-manager.jar
-CMD java -jar /app/avcn-manager.jar
+ADD target/avcnmanager-${VERSION}.jar /app/avcnmanager.jar
+CMD java -jar /app/avcnmanager.jar
