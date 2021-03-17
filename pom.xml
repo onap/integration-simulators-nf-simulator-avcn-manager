@@ -31,9 +31,9 @@
     </parent>
 
     <groupId>org.onap.integration.simulators.nf-simulator.avcn-manager</groupId>
-    <artifactId>avcn-manager</artifactId>
+    <artifactId>avcnmanager</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>avcn-manager</name>
+    <name>avcnmanager</name>
 
     <properties>
         <nexusproxy>https://nexus.onap.org</nexusproxy>
