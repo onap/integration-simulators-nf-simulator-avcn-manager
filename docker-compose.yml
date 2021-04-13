@@ -1,4 +1,4 @@
-version: '3'
+version: '3.5'
 
 services:
 
@@ -15,7 +15,7 @@ services:
       KAFKA_BOOTSTRAP_SERVERS: avcn-kafka:9092
       KAFKA_SOURCE_TOPIC: config
       KAFKA_APPLICATION_ID: avcn-manager
-      REST_CLIENT_VESCLIENT_ENDPOINT: http://ves-client:5000/simulator/start
+      REST_CLIENT_PNFSIMULATOR_ENDPOINT: http://ves-client:5000/simulator/start
     depends_on:
       - avcn-kafka
 
