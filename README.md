@@ -1,8 +1,8 @@
-# AVCN Simulator
-Simulator that fetches changes of configuration from kafka and sends them to VES client.
+# AVCN Manager
+Application that fetches changes of configuration from kafka and sends them to VES client.
 
 ## What does it do?
-The simulator processes notifications from NETCONF server. It does this by being a subscriber of a Kafka topic that is fed 
+The manager processes notifications from NETCONF server. It does this by being a subscriber of a Kafka topic that is fed 
 with NETCONF notifications. The topic name is "config". Incoming notifications are then processed and output of this
  processing is sent to VES client.
 
@@ -112,7 +112,7 @@ The resulting request to VES client looks like the following (the "dn" and "attr
    }        
 }
 ````
-## Simulator configuration
+## Manager configuration
 It's possible to override default configuration. Following environment variables can be set 
 
     KAFKA_BOOTSTRAP_SERVERS - Kafka host, by default kafka1:9092 
@@ -122,14 +122,14 @@ It's possible to override default configuration. Following environment variables
     
     KAFKA_SOURCE_TOPIC - Kafka topic, where Netconf simulator pushes notification, by default config
         
-    REST_CLIENT_PNF_SIMULATOR_ENDPOINT -  VES client's URL, by default pnf-simulator:5000/simulator/start
+    REST_CLIENT_PNFSIMULATOR_ENDPOINT -  VES client's URL, by default pnf-simulator:5000/simulator/start
     
     REST_CLIENT_VES_ENDPOINT - VES URL, AVNC events will be send via VES client to this address 
     
 ## Start avcn-manager
 To run avcn manager, config ves and pnf-simulator ip in docker-compose.yaml
 REST_CLIENT_VES_ENDPOINT: http://<ves>:8080/eventListener/v7
-REST_CLIENT_VESCLIENT_ENDPOINT: http://<ves-client>:5000/simulator/start
+REST_CLIENT_PNFSIMULATOR_ENDPOINT: http://<ves-client>:5000/simulator/start
 
 and start docker-compose
     
