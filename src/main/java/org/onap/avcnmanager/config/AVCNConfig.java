@@ -70,8 +70,7 @@ public class AVCNConfig {
     public KafkaStreams getKafkaStream(
             @Qualifier("AVCNTopology") Topology topology,
             @Qualifier("AVCNProperties") Properties properties
-    ) throws InterruptedException {
-        Thread.sleep(10000);
+    ) {
         return new KafkaStreams(topology, properties);
     }
 

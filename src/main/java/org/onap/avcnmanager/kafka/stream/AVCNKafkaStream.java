@@ -27,6 +27,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 
 @Component
@@ -39,22 +40,23 @@ public class AVCNKafkaStream {
     @Autowired
     AVCNKafkaStream(KafkaStreams streams) {
         this.streams = streams;
-        streams.setUncaughtExceptionHandler(this::handleExceptionInStreams);
     }
 
     @PostConstruct
     void startKafkaStream() {
+        streams.setUncaughtExceptionHandler(this::handleExceptionInStreams);
         streams.start();
+        LOGGER.info("The AVCN starts listening on Kafka messages ...");
+    }
+
+    @PreDestroy
+    void stopKafkaStream() {
+        streams.close();
     }
 
     private void handleExceptionInStreams(Thread thread,Throwable throwable) {
-        LOGGER.warn("Exception occurred int kafka stream: " + thread);
-        LOGGER.debug(throwable.getMessage());
-        if(!streams.state().isRunning()) {
-            LOGGER.error("Kafka stream stop running, state: " + streams.state());
-            streams.close();
-            System.exit(1);
-        }
+        LOGGER.error("Unexpected exception occurred in the Kafka stream. Prepare to shutdown ... ", throwable);
+        streams.close();
     }
 }
 
