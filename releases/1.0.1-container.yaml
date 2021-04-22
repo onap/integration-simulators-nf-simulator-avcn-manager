@@ -1,0 +1,8 @@
+distribution_type: 'container'
+container_release_tag: '1.0.1'
+project: 'integration-simulators-nf-simulator-avcn-manager'
+log_dir: 'integration-simulators-nf-simulator-avcn-manager-maven-docker-stage-master/56/'
+ref: 9dde0643293fa5c06e845b2a8121486353e8e81c
+containers:
+  - name: 'org.onap.integration.nfsimulator.avcnmanager'
+    version: '1.0.1-20210422T100038Z'
